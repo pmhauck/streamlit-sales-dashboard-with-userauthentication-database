@@ -5,8 +5,9 @@ from dotenv import load_dotenv  # pip install python-dotenv
 
 
 # Load the environment variables
-load_dotenv(".env")
-DETA_KEY = os.getenv("DETA_KEY")
+#load_dotenv(".env")
+#DETA_KEY = os.getenv("DETA_KEY")
+DETA_KEY = "b0bfh6kn_RuTicVN7cQXKA59Jz2Np3JUBPNxKod94"
 
 # Initialize with a project key
 deta = Deta(DETA_KEY)
@@ -39,3 +40,6 @@ def update_user(username, updates):
 def delete_user(username):
     """Always returns None, even if the key does not exist"""
     return db.delete(username)
+
+
+insert_user("pparker","Peter Parker","abc123")
